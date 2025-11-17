@@ -1320,7 +1320,7 @@ PrefabInstance:
     - target: {fileID: 3018108657062391778, guid: 41e5c0266515f1c49aec825f2068a297,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3896440064613542801, guid: 41e5c0266515f1c49aec825f2068a297,
         type: 3}
@@ -1444,10 +1444,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3896440064613542801, guid: 41e5c0266515f1c49aec825f2068a297,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1604446134}
-    - targetCorrespondingSourceObject: {fileID: 3896440064613542801, guid: 41e5c0266515f1c49aec825f2068a297,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1604446143}
     - targetCorrespondingSourceObject: {fileID: 3896440064613542801, guid: 41e5c0266515f1c49aec825f2068a297,
         type: 3}
@@ -1490,20 +1486,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggeringTag: Enemy
   sceneName: level-game-over
---- !u!114 &1604446134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604446122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24cd8fbea89778946aace769a962b58c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggeringTag: ToNextLevel
-  sceneName: level-2
 --- !u!114 &1604446135 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5043964463970077360, guid: 41e5c0266515f1c49aec825f2068a297,
