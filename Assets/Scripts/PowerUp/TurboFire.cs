@@ -1,12 +1,12 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class TurboFire : MonoBehaviour
 {
     [Header("Settings")]
     public int pointsRequired = 5;
     public float turboDuration = 5f;
-    public float turboFireRate = 0.15f; // éøé îäéø éåúø
+    public float turboFireRate = 0.15f; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     [Header("References")]
     public LaserShooter laserShooter;

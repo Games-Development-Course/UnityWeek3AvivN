@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class HorizontalWrap : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
+    [SerializeField]
+    private Camera cam;
 
     private float leftLimit;
     private float rightLimit;

@@ -5,18 +5,31 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(NumberField))]
 public class ClickScoreAdder : MonoBehaviour
 {
-    [SerializeField] protected InputAction addAction = new InputAction(type: InputActionType.Button);
-    [SerializeField] protected int scoreToAdd;
+    [SerializeField]
+    protected InputAction addAction = new InputAction(type: InputActionType.Button);
 
-    void OnEnable()    {        addAction.Enable();    }
-    void OnDisable()    {        addAction.Disable();    }
+    [SerializeField]
+    protected int scoreToAdd;
 
-    private void Start()   {
+    void OnEnable()
+    {
+        addAction.Enable();
+    }
+
+    void OnDisable()
+    {
+        addAction.Disable();
+    }
+
+    private void Start()
+    {
         GetComponent<NumberField>().SetNumber(1);
     }
 
-    private void Update() {
-        if (addAction.WasPressedThisFrame()) {
+    private void Update()
+    {
+        if (addAction.WasPressedThisFrame())
+        {
             GetComponent<NumberField>().AddNumber(scoreToAdd);
         }
     }

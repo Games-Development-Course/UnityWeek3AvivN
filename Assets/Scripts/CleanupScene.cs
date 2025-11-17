@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CleanupScene: MonoBehaviour
+public class CleanupScene : MonoBehaviour
 {
     void Start()
     {

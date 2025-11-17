@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class WorldBoundsBuilder : MonoBehaviour
 {
-    [SerializeField] private float thickness = 1f;
-    [SerializeField] private Camera cam;
+    [SerializeField]
+    private float thickness = 1f;
+
+    [SerializeField]
+    private Camera cam;
 
     private Transform boundsParent;
 

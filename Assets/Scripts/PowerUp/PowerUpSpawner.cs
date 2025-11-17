@@ -9,7 +9,7 @@ public class PowerUpSpawner : MonoBehaviour
 
     private float timer;
 
-    void Update()
+    private void Update()
     {
         timer += Time.deltaTime;
 
@@ -20,11 +20,11 @@ public class PowerUpSpawner : MonoBehaviour
         }
     }
 
-    void SpawnPowerUp()
+    private void SpawnPowerUp()
     {
         float x = Random.Range(spawnAreaMin.x, spawnAreaMax.x);
         float y = Random.Range(spawnAreaMin.y, spawnAreaMax.y);
 
-        Instantiate(powerUpPrefab, new Vector3(x, y, 0), Quaternion.identity);
+        Instantiate(powerUpPrefab, new Vector3(x, y, 0f), Quaternion.identity);
     }
 }

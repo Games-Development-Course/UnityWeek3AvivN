@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance;  // Singleton жойп блм очен
+    public static ScoreManager instance; // Singleton пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 
     public int currentScore = 0;
 
     private void Awake()
     {
-        // ан лбш йщ азг – оезчйн аъ дйщп
+        // пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
         if (instance != null)
         {
             Destroy(gameObject);
@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject);  // рщаш зй бйп сцреъ
+        DontDestroyOnLoad(gameObject); // пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     }
 
     public void AddScore(int amount)
