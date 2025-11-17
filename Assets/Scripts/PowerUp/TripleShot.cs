@@ -22,6 +22,7 @@ public class TripleShot : MonoBehaviour
         if (isActive)
         {
             timer -= Time.deltaTime;
+
             if (timer <= 0f)
             {
                 isActive = false;

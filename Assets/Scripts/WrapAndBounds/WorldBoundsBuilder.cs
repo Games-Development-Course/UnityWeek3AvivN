@@ -7,56 +7,62 @@ public class WorldBoundsBuilder : MonoBehaviour
 
     private Transform boundsParent;
 
-    void Start()
+    private void Start()
     {
         if (cam == null)
+        {
             cam = Camera.main;
+        }
 
-        // Parent for easy cleanup
         boundsParent = new GameObject("DynamicBounds").transform;
-        boundsParent.parent = this.transform;
+        boundsParent.parent = transform;
 
         BuildBounds();
     }
 
-    void Update()
+    private void Update()
     {
-        BuildBounds(); // Rebuild every frame (safe + cheap)
+        BuildBounds();
     }
 
     private void BuildBounds()
     {
-        // Delete old bounds
         foreach (Transform child in boundsParent)
+        {
             Destroy(child.gameObject);
+        }
 
-        float height = cam.orthographicSize * 2;
+        float height = cam.orthographicSize * 2f;
         float width = height * cam.aspect;
         Vector3 camPos = cam.transform.position;
 
-        // Top bound (block)
-        CreateBound("TopBound",
+        CreateBound(
+            "TopBound",
             new Vector2(width, thickness),
-            new Vector2(camPos.x, camPos.y + height / 2 + thickness / 2),
-            false);
+            new Vector2(camPos.x, camPos.y + height / 2f + thickness / 2f),
+            false
+        );
 
-        // Bottom bound (block)
-        CreateBound("BottomBound",
+        CreateBound(
+            "BottomBound",
             new Vector2(width, thickness),
-            new Vector2(camPos.x, camPos.y - height / 2 - thickness / 2),
-            false);
+            new Vector2(camPos.x, camPos.y - height / 2f - thickness / 2f),
+            false
+        );
 
-        // Left bound (wrap)
-        CreateBound("LeftBound",
+        CreateBound(
+            "LeftBound",
             new Vector2(thickness, height),
-            new Vector2(camPos.x - width / 2 - thickness / 2, camPos.y),
-            true);
+            new Vector2(camPos.x - width / 2f - thickness / 2f, camPos.y),
+            true
+        );
 
-        // Right bound (wrap)
-        CreateBound("RightBound",
+        CreateBound(
+            "RightBound",
             new Vector2(thickness, height),
-            new Vector2(camPos.x + width / 2 + thickness / 2, camPos.y),
-            true);
+            new Vector2(camPos.x + width / 2f + thickness / 2f, camPos.y),
+            true
+        );
     }
 
     private void CreateBound(string name, Vector2 size, Vector2 pos, bool isTrigger)

@@ -6,7 +6,7 @@ public class TurboFire : MonoBehaviour
     [Header("Settings")]
     public int pointsRequired = 5;
     public float turboDuration = 5f;
-    public float turboFireRate = 0.15f;   // ירי מהיר יותר
+    public float turboFireRate = 0.15f; // ירי מהיר יותר
 
     [Header("References")]
     public LaserShooter laserShooter;
@@ -17,26 +17,24 @@ public class TurboFire : MonoBehaviour
     private float turboTimer = 0f;
     private float lastShotTime = 0f;
 
-    void Start()
+    private void Start()
     {
         turboText.gameObject.SetActive(false);
     }
 
-    void Update()
+    private void Update()
     {
         if (turboActive)
         {
             turboTimer -= Time.deltaTime;
 
-            // ירי אוטומטי אם מחזיקים רווח
             if (Input.GetKey(KeyCode.Space) && Time.time > lastShotTime + turboFireRate)
             {
-                laserShooter.ManualFire();  // ירי מהיר
+                laserShooter.ManualFire();
                 lastShotTime = Time.time;
             }
 
-            // כיבוי טורבו
-            if (turboTimer <= 0)
+            if (turboTimer <= 0f)
             {
                 turboActive = false;
                 currentPoints = 0;
@@ -45,15 +43,19 @@ public class TurboFire : MonoBehaviour
         }
     }
 
-    // נקרא מה-LaserShooter כשמוסיפים נקודה
     public void AddPoint()
     {
-        if (turboActive) return;
+        if (turboActive)
+        {
+            return;
+        }
 
         currentPoints++;
 
         if (currentPoints >= pointsRequired)
+        {
             ActivateTurbo();
+        }
     }
 
     private void ActivateTurbo()

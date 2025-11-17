@@ -10,20 +10,25 @@ public class HorizontalWrap : MonoBehaviour
     private void Awake()
     {
         if (cam == null)
+        {
             cam = Camera.main;
+        }
     }
 
     private void Update()
     {
-        UpdateLimits();  
+        UpdateLimits();
 
         Vector3 pos = transform.position;
 
         if (pos.x < leftLimit)
+        {
             pos.x = rightLimit;
-
+        }
         else if (pos.x > rightLimit)
+        {
             pos.x = leftLimit;
+        }
 
         transform.position = pos;
     }
