@@ -67,7 +67,7 @@ public class LaserShooter : ClickSpawner
         mover.SetVelocity(dir * 10f);   // 10f = מהירות, תשנה למה שבא לך
 
         // בונוס: לסובב ויזואלית
-        laser.transform.rotation = Quaternion.Euler(0, 0, angle);
+        laser.transform.rotation = Quaternion.Euler(0, 0, angle + 90f);
     }
 
 

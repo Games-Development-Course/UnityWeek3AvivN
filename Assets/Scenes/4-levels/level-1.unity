@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpSpawner
   powerUpPrefab: {fileID: 206225842732292031, guid: 96af89a47f3faf84e8e8cfd3f05355b9,
     type: 3}
-  interval: 3
+  interval: 10
   spawnAreaMin: {x: -8, y: -4}
   spawnAreaMax: {x: 8, y: 4}
 --- !u!4 &1336688124
@@ -2229,7 +2229,6 @@ MonoBehaviour:
     type: 3}
   velocityOfSpawnedObject: {x: 0, y: 10, z: 0}
   turbo: {fileID: 0}
-  laserPrefab: {fileID: 0}
   tripleShot: {fileID: 0}
   pointsToAdd: 1
   scoreField: {fileID: 0}
