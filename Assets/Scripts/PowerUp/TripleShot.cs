@@ -2,32 +2,30 @@ using UnityEngine;
 
 public class TripleShot : MonoBehaviour
 {
-    public LaserShooter shooter;
-    public float duration = 5f;
-
-    private bool active = false;
+    private bool isActive = false;
+    private float duration = 5f;
     private float timer = 0f;
 
-    void Update()
+    public bool IsActive()
     {
-        if (active)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                active = false;
-            }
-        }
+        return isActive;
     }
 
     public void ActivateTripleShot()
     {
-        active = true;
+        isActive = true;
         timer = duration;
     }
 
-    public bool IsActive()
+    private void Update()
     {
-        return active;
+        if (isActive)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0f)
+            {
+                isActive = false;
+            }
+        }
     }
 }
