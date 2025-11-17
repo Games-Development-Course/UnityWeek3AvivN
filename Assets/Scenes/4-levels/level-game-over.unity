@@ -512,7 +512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1811610585
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1091,6 +1091,8 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 206225842732292031, guid: 42fa8b351390387418068fad6913b260,
     type: 3}
   velocityOfSpawnedObject: {x: 0, y: 10, z: 0}
+  turbo: {fileID: 0}
+  tripleShot: {fileID: 0}
   pointsToAdd: 1
   scoreField: {fileID: 0}
 --- !u!4 &4756833480714881
