@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 206225842732292027}
   - component: {fileID: 206225842732292026}
+  - component: {fileID: 6202538275612052410}
   - component: {fileID: 206225842732292029}
   - component: {fileID: -1515559938600826020}
   - component: {fileID: 6742800857908197687}
   - component: {fileID: -8433250894850022944}
   m_Layer: 0
-  m_Name: Laser
+  m_Name: PowerUp
   m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.27, y: 0.13, z: 0}
-  m_LocalScale: {x: 0.21736404, y: 0.56066626, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,6 +45,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206225842732292031}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6202538275612052410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206225842732292031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a492225b15597784cbff078207128a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUp
 --- !u!23 &206225842732292029
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -69,7 +82,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c0a33021f902e34b8208346d0548d54, type: 2}
+  - {fileID: 2100000, guid: 413bf45bd838be34f956a691a2c8a9b8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
