@@ -5,6 +5,8 @@
  * It also updates the "scoreText" field of the new laser.
  */
 public class LaserShooter: ClickSpawner {
+    public TurboFire turbo;   // להוסיף למעלה
+
     [SerializeField]
     [Tooltip("How many points to add to the shooter, if the laser hits its target")]
     int pointsToAdd = 1;
@@ -21,8 +23,14 @@ public class LaserShooter: ClickSpawner {
     {
         scoreField.AddNumber(pointsToAdd);
         ScoreManager.instance.AddScore(pointsToAdd);   // שומר נקודות גלובלית
+        if (turbo != null)
+            turbo.AddPoint();   // זה מוסיף נקודה למונה טורבו
 
     }
+    public void ManualFire()
+    {
+        spawnObject();
+    }   
 
     protected override GameObject spawnObject() {
         GameObject newObject = base.spawnObject();  // base = super
